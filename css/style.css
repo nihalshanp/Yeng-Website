@@ -1471,4 +1471,37 @@ p.comment-form-author {
 	background: linear-gradient(to right, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	
 }
+/* styling theme selector */
+/* .dropbtn {
+      background-color: transparent;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      color: #000;
+      padding: 2px;
+      font-weight: 700;
+      font-family: Sans-Serif;
+      outline: none;
+      border: none;
+    } */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
 
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .theme-selector {
+      background-color: #07ebb9;
+      border: none;
+      outline: none;
+      padding: 8px;
+    }

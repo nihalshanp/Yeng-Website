@@ -91,6 +91,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<li>
 					<a href="#contact" class="scroll">Contact</a>
 				</li>
+				<li>
+				  <a>
+            <div class="dropdown">
+              <span class="dropbtn" id="btTheme">THEME</span> :
+              <span id="theme-viewer"></span>
+              <div class="dropdown-content">
+                <select id="theme-selector" class="theme-selector">
+                 <option value="Default">System Default</option>
+                 <option value="Light">Light</option>
+                  <option value="Dark">Dark</option>
+                </select>
+              </div>
+            </div>
+          </a>
+				</li>
 			</ul>
 			<a href="#" id="pull">
 				<img src="images/menu-icon.png" title="menu" />
@@ -656,6 +671,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			$().UItoTop({ easingType: 'easeOutQuart' });
 		});
 	</script>
+	<!-- script for theme selector -->
+  <script>
+    var span = document.getElementById('theme-viewer');
+    var text = document.getElementById('theme-selector');
+    span.innerHTML = text.value
+    text.addEventListener("change", function(){
+      span.innerHTML = this.value;
+    });
+  </script>
 </body>
 
 </html>
