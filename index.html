@@ -10,10 +10,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 	<title>Yeng App | Home :: Crazy Amigos</title>
 	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- font awesome -->
+	<link rel="stylesheet" href="css/all.css" />
+	<script defer src="js/all.js"></script>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="js/jquery.min.js"></script>
 	<!-- Custom Theme files -->
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<script src="js/theme.js"></script>
 	<!-- Custom Theme files -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -92,20 +95,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<a href="#contact" class="scroll">Contact</a>
 				</li>
 				<li>
-				  <a>
+				  <a class="theme_viewer">
             <div class="dropdown">
-              <span class="dropbtn" id="btTheme">THEME</span> :
+              <span class="dropbtn" id="btTheme">Theme</span>
               <span id="theme-viewer"></span>
               <div class="dropdown-content">
                 <select id="theme-selector" class="theme-selector">
-                 <option value="Default">System Default</option>
-                 <option value="Light">Light</option>
-                  <option value="Dark">Dark</option>
+                 <option value="DF"><strong>System Default</strong></option>
+                 <option value="LT"><strong>Light</strong></option>
+                  <option value="DK"><strong>Dark</strong></option>
                 </select>
               </div>
             </div>
           </a>
-				</li>
+        </li>
 			</ul>
 			<a href="#" id="pull">
 				<img src="images/menu-icon.png" title="menu" />
@@ -675,9 +678,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <script>
     var span = document.getElementById('theme-viewer');
     var text = document.getElementById('theme-selector');
-    span.innerHTML = text.value
+    span.innerHTML = ": " + text.value
     text.addEventListener("change", function(){
-      span.innerHTML = this.value;
+      span.innerHTML = ": " + this.value;
     });
   </script>
 </body>
